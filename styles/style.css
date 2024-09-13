@@ -82,6 +82,7 @@ h1 {
   transform: scale(1.05) translateY(-3px);
   background: var(--main-color);
   box-shadow: 0 5px 15px rgba(123, 75, 183, 0.6);
+  transform: scale(1.1)
 }
 
 .icon {
