@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Anek Devanagari", "Nunito Sans", sans-serif;
+}
+
+:root {
+  --bg-color: #000000;
+  --second-bg-color: #caff0c;
+  --third-bg-color: #fff;
+  --text-color: #fff;
+  --main-color: #7b4bb7;
+}
+
+body {
+  background: linear-gradient(var(--main-color), var(--bg-color));
+  padding: 150px;
+}
+
+h1 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+#logo img {
+  height: 145px;
+  border-radius: 25%;
+}
+
+#logo {
+  text-align: center;
+}
+
+.links {
+  text-align: center;
+}
+
+.links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 3.2rem;
+  background: var(--bg-color);
+  border: 0.2rem solid var(--main-color);
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin: 1rem 0.5rem 1.3rem 0;
+  transition: 0.3s ease;
+}
+
+
