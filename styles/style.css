@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
+:root {
+  --bg-color: #000000;
+  --second-bg-color: #caff0c;
+  --third-bg-color: #fff;
+  --text-color: #fff;
+  --main-color: #7b4bb7;
+  --gradient-bg: linear-gradient(135deg, var(--main-color), var(--bg-color));
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,53 +16,101 @@
   text-decoration: none;
   border: none;
   outline: none;
-  scroll-behavior: smooth;
-  font-family: "Anek Devanagari", "Nunito Sans", sans-serif;
-}
-
-:root {
-  --bg-color: #000000;
-  --second-bg-color: #caff0c;
-  --third-bg-color: #fff;
-  --text-color: #fff;
-  --main-color: #7b4bb7;
+  font-family: "Nunito Sans", "Anek Devanagari", sans-serif;
 }
 
 body {
-  background: linear-gradient(var(--main-color), var(--bg-color));
-  padding: 150px;
+  background: var(--gradient-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 h1 {
   color: var(--text-color);
   text-align: center;
-}
-
-#logo img {
-  height: 145px;
-  border-radius: 25%;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #logo {
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+#logo img {
+  height: 145px;
+  border-radius: 10%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#logo img:hover {
+  transform: scale(1.05);
 }
 
 .links {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .links a {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 20rem;
   height: 3.2rem;
-  background: var(--bg-color);
-  border: 0.2rem solid var(--main-color);
+  background: rgba(0, 0, 0, 0.6);
+  border: 0.2rem solid var(--third-bg-color);
+  border-radius: 25px;
   font-size: 1.1rem;
   color: var(--text-color);
-  margin: 1rem 0.5rem 1.3rem 0;
-  transition: 0.3s ease;
+  margin: 0.8rem 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
+.links a:hover {
+  color: var(--text-color);
+  transform: scale(1.05) translateY(-3px);
+  background: var(--main-color);
+  box-shadow: 0 5px 15px rgba(123, 75, 183, 0.6);
+}
 
+.icon {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.card {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: var(--gradient-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .links a {
+    width: 90%;
+  }
+  
+  .card {
+    max-width: 90%;
+  }
+}
