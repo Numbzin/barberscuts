@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  --bg-color: #ff0000;
+  --second-bg-color: #caff0c;
+  --third-bg-color: #ffffff;
+  --text-color: #ffffff;
+  --main-color: rgb(0, 0, 0);
+  --hover-color: #d40303;
+  --gradient-bg: linear-gradient(126deg, var(--main-color), var(--bg-color));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Nunito Sans", "Anek Devanagari", sans-serif;
+}
+
+body {
+  background: var(--gradient-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+h1 {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#logo img {
+  height: 145px;
+  border-radius: 10%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#logo img:hover {
+  transform: scale(1.05);
+}
+
+.links {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 3.2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0.2rem solid var(--third-bg-color);
+  border-radius: 100px 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin: 0.8rem 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(30px);
+}
+
+.links a:hover {
+  color: var(--text-color);
+  transform: scale(1.05) translateY(-3px);
+  background: var(--hover-color);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.63);
+  transform: scale(1.1)
+}
+
+.icon {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.card {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .links a {
+    width: 100%;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+}
