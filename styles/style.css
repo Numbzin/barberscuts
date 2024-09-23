@@ -18,11 +18,66 @@
   font-family: "Nunito Sans", "Anek Devanagari", sans-serif;
 }
 
+/* header */
+
 header {
-  background-image: url(../images/background1.jpg);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   min-height: 185px;
   background-position: center;
 }
+
+.header {
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  
+}
+
+.text-section {
+  max-width: 60%;
+  padding-right: 20px;
+}
+
+.text-section h1 {
+  margin-bottom: 20px;
+}
+
+.image-placeholder {
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-image: url(../images/nmb.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin-top: -20px;
+}
+
+/* section cortes */
