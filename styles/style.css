@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 :root {
   --bg-color: #000000;
   --second-bg-color: #ffe70c;
@@ -32,7 +34,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  min-height: 185px;
+  min-height: 265px;
   background-position: center;
 
 }
@@ -54,8 +56,15 @@ header {
 }
 
 .nav-links a {
+  margin-left: 0.2rem;
   color: var(--main-color);
-  text-decoration: none;
+  transition: 0.1s ease-in;
+}
+
+.nav-links a:hover {
+  color: var(--text-color);
+  cursor: pointer;
+  border-bottom: 3px solid var(--main-color);
 }
 
 .header-content {
@@ -68,12 +77,18 @@ header {
 }
 
 .text-section {
-  max-width: 60%;
+  font-size: 20px;
+  max-width: 750px;
   padding-right: 20px;
 }
 
 .text-section h1 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  font-family: Anek Devanagari;
+}
+
+.text-section p {
+  font-family: Nunito Sans;
 }
 
 .image-placeholder img {
