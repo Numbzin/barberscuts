@@ -11,21 +11,59 @@
     <header class="header">
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#">Cortes</a></li>
-                <li><a href="#">Agendamento</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#cortes">Cortes</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
             </ul>
         </nav>
-        <div class="header-content">
+        <div class="header-content container">
             <div class="text-section">
-                <h1>Barber's Cut's</h1>
+                <h1>Barber's <span>Cut's</span></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="image-placeholder"></div>
+            <div class="image-placeholder">
+                <img src="./images/nmb.jpeg" alt="">
+            </div>
         </div>
     </header>
-    <section id="img-cuts">
-      
+
+    <section id="cortes">
+        <div id="containerCards" class="container-cards">
+        </div>
     </section>
+
+    <section id="agendamento" class="agendamento-section">
+    <div class="agendamento-content">
+        <h1>Agende Seu Corte</h1>
+        <p>Preencha o formulário abaixo para agendar seu corte de cabelo. Estamos aqui para atender você da melhor maneira possível!</p>
+        <button id="openFormBtn" class="agendar-btn">Agendar Agora</button>
+    </div>
+    <div class="agendamento-image">
+        <div class="divider"></div>
+        <img src="./images/nmb.jpeg" alt="Agendamento" class="agendamento-img">
+    </div>
+</section>
+
+<div id="formModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <form id="formAgendamento">
+            <h2>Formulário de Agendamento</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required>
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </div>
+</div>
+    
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/wpp.js"></script>
 </body>
 </html>
