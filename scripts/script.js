@@ -13,7 +13,12 @@ const dadosCards = [
         imgSrc: './images/nmb.jpeg', 
         titulo: 'Fade Clássico', 
         descricao: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-    }, 
+    },
+    { 
+        imgSrc: './images/nmb.jpeg', 
+        titulo: 'Corte Basico', 
+        descricao: 'lorem ipsum dolor sit amet'
+    }
 ];
 
 function criarCard(imgSrc, titulo, descricao) {

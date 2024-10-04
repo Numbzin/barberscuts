@@ -9,61 +9,126 @@
   </head>
   <body>
     <header class="header">
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#cortes">Cortes</a></li>
-                <li><a href="#agendamento">Agendamento</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-            </ul>
-        </nav>
-        <div class="header-content container">
-            <div class="text-section">
-                <h1>Barber's <span>Cut's</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="image-placeholder">
-                <img src="./images/nmb.jpeg" alt="">
-            </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#cortes">Cortes</a></li>
+          <li><a href="#agendamento">Agendamento</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+        </ul>
+      </nav>
+      <div class="header-content container">
+        <div class="text-section">
+          <h1>Barber's <span>Cut's</span></h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
+        <div class="image-placeholder">
+          <img src="./images/nmb.jpeg" alt="" />
+        </div>
+      </div>
     </header>
 
     <section id="cortes">
-        <div id="containerCards" class="container-cards">
-        </div>
+        <h2 class="heading">Cor<span class="heading-cortes">tes</span></h2>
+      <div id="containerCards" class="container-cards"></div>
     </section>
 
     <section id="agendamento" class="agendamento-section">
-    <div class="agendamento-content">
+      <div class="agendamento-content">
         <h1>Agende Seu Corte</h1>
-        <p>Preencha o formulário abaixo para agendar seu corte de cabelo. Estamos aqui para atender você da melhor maneira possível!</p>
+        <p>
+          Preencha o formulário abaixo para agendar seu corte de cabelo. Estamos
+          aqui para atender você da melhor maneira possível!
+        </p>
         <button id="openFormBtn" class="agendar-btn">Agendar Agora</button>
-    </div>
-    <div class="agendamento-image">
+      </div>
+      <div class="agendamento-image">
         <div class="divider"></div>
-        <img src="./images/nmb.jpeg" alt="Agendamento" class="agendamento-img">
-    </div>
-</section>
+        <img
+          src="./images/nmb.jpeg"
+          alt="Agendamento"
+          class="agendamento-img"
+        />
+      </div>
+    </section>
 
-<div id="formModal" class="modal">
-    <div class="modal-content">
+    <div id="formModal" class="modal">
+      <div class="modal-content">
         <span class="close-btn">&times;</span>
         <form id="formAgendamento">
-            <h2>Formulário de Agendamento</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" required>
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
-            <label for="data">Data:</label>
-            <input type="date" id="data" required>
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" required>
-            <button type="submit" class="submit-btn">Enviar</button>
+          <h2>Formulário de Agendamento</h2>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required />
+          <label for="telefone">Telefone:</label>
+          <input
+            type="tel"
+            id="telefone"
+            placeholder="(XX) XXXXX-XXXX"
+            required
+          />
+          <label for="data">Data:</label>
+          <input type="date" id="data" required />
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" required />
+          <button type="submit" class="submit-btn">Enviar</button>
         </form>
+      </div>
     </div>
-</div>
-    
+
+    <section id="contato" class="contact-section">
+        <h2 class="heading">Nos <span class="heading-map">Contate</span></h2>
+        <div class="contact">
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14700.966763688606!2d-43.551622949999995!3d-22.9044546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1727395062625!5m2!1spt-BR!2sbr" width="98%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <p>
+                    <b>Rua Barbas Cortadas, 789, Campo Grande</b>
+                </p>
+                <p>
+                   Tel: <span class="bold numberPhone">21 5555-55555</span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <!-- <label for="nome">Nome</label> -->
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                </div>
+
+                <div class="form-group">
+                    <!-- <label for="email">E-mail</label> -->
+                    <input type="text" name="email" id="email" placeholder="E-mail ou telefone" required>
+                </div>
+
+                <div class="form-group">
+                    <select name="assunto" aria-placeholder="Assunto">
+                        <option disabled selected>Assunto</option>
+                        <option value="contato">Contato</option>
+                        <option value="reclame">Reclamação</option>
+                        <option value="sugent">Sugestão</option>
+                    </select>    
+                </div>
+
+                <div class="form-group">
+                    <textarea name="mensagem" id="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+                </div>
+
+                <div class="form-group right">
+                    <!-- <input type="submit" value="Enviar"> -->
+                    <button class="formButton">Enviar</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
     <script src="./scripts/script.js"></script>
     <script src="./scripts/wpp.js"></script>
-</body>
+  </body>
 </html>

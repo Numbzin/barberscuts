@@ -6,7 +6,7 @@
   --third-bg-color: #ffffff;
   --text-color: #ffffff;
   --main-color: #ffe70c;
-  --hover-color: #ffffff;
+  --hover-color: #ffae00;
   --gradient-bg: linear-gradient(126deg, var(--main-color), var(--bg-color));
 }
 
@@ -78,7 +78,7 @@ header {
 
 .text-section {
   font-size: 20px;
-  max-width: 750px;
+  max-width: 450px;
   padding-right: 20px;
 }
 
@@ -96,12 +96,11 @@ header {
   height: 150px;
   border: 2px solid white;
   border-radius: 50%;
-  margin-top: -20px;
-  object-fit: cover;
 }
 
 span {
   color: var(--second-bg-color);
+  font-family: Nunito Sans;
 }
 
 .container {
@@ -109,6 +108,24 @@ span {
   width: 100%;
   min-width: 360px;
   max-width: 1280px;
+}
+
+/* heading */
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  font-family: Anek Devanagari;
+  color: var(--text-color);
+}
+
+.heading-map {
+  color: var(--bg-color);
+  font-family: Anek Devanagari;
+}
+
+.heading-cortes {
+  color: var(--bg-color);
+  font-family: Anek Devanagari;
 }
 
 /* section cortes */
@@ -235,14 +252,14 @@ span {
 .agendamento-img {
   position: relative;
   z-index: 2;
-  width: 100%;
+  width: 500px;
   height: auto;
   border-radius: 10px;
 }
 
 /* Modal */
 .modal {
-  display: none; /* Escondido por padrão */
+  display: none; 
   position: fixed;
   z-index: 999;
   left: 0;
@@ -304,7 +321,7 @@ form input {
 .submit-btn {
   padding: 10px 20px;
   background-color: var(--main-color);
-  color: #fff;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -313,4 +330,75 @@ form input {
 
 .submit-btn:hover {
   background-color: var(--hover-color);
+}
+
+/* section map */
+
+.contact-section {
+  background-color: var(--main-color);
+}
+
+
+/* Area de contato */
+.contact {
+  display: flex;
+}
+
+.contact-map div p span {
+  color: var(--text-color);
+}
+
+.contact-map {
+  margin-left: 150px;
+}
+
+.contact-map,
+.contact-form {
+  padding: 20px 15px 20px 5px;
+  width: 50%;
+}
+
+/* form */
+
+.form-group {
+  width: 500px;
+  padding: 5px;
+  align-content: center;
+  padding-left: 20px;
+  margin-left: 100px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid;
+}
+
+.form-group button {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.form-group button:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  transform: scale(1.1);
+  border: 1px solid var(--bg-color);
+}
+
+.left{
+  display: flex;
+  justify-content: start;
+}
+
+.right{
+  display: flex;
+  justify-content: end;
 }
