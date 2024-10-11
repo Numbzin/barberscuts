@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+  
+  .nav-links a {
+    margin-left: 0.2rem;
+    color: var(--main-color);
+    transition: 0.1s ease-in;
+  }
+  
+  .nav-links a:hover {
+    color: var(--text-color);
+    cursor: pointer;
+    border-bottom: 3px solid var(--main-color);
+    text-decoration: none;
+  }
