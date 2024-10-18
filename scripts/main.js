@@ -1,5 +1,4 @@
-
-navBarComponent()
+navBarComponent();
 
 function navBarComponent() {
   const element = document.getElementById("navbar-component");
@@ -13,13 +12,10 @@ function navBarComponent() {
         </ul>
       </nav>`;
 
-    element.innerHTML = navbar
-
+  element.innerHTML = navbar;
 }
 
-window.addEventListener('scroll', function(){
-  let header = document.querySelector('.navbar')
-  header.classList.toggle('opacity', window.scrollY > 0)
-})
-
-
+window.addEventListener("scroll", function () {
+  let header = document.querySelector(".navbar");
+  header.classList.toggle("opacity", window.scrollY > 0);
+});
