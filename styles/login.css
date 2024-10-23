@@ -1,12 +1,12 @@
 body {
     background: linear-gradient(135deg, var(--main-color), var(--bg-color));
     /* Para Imagem de fundo!! */
-    /* background-image: url(../images/bglogin.jpg);
+    background-image: url(../images/bglogin.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: "Anek Devanagari", sans-serif; */
+    font-family: "Anek Devanagari", sans-serif;
 }
 
 a:hover {

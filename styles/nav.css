@@ -37,4 +37,30 @@
   text-decoration: none;
 }
 
+.nav-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 9px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item a:hover {
+  color: var(--main-color);
+}
+
+.navbar-expand-lg {
+  padding: 9px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.nav-item a:hover {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--main-color);
+}
 
