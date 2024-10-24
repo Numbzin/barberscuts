@@ -33,21 +33,8 @@
 .nav-links a:hover {
   color: var(--text-color);
   cursor: pointer;
-  border-bottom: 3px solid var(--main-color);
   text-decoration: none;
-}
-
-.nav-item a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 9px;
-  text-decoration: none;
-  color: white;
-}
-
-.nav-item a:hover {
-  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
 }
 
 .navbar-expand-lg {
@@ -55,8 +42,12 @@
 }
 
 .nav-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: var(--main-color);
+  border-bottom: 2px solid transparent;
 }
 
 .nav-item a:hover {
