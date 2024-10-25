@@ -9,10 +9,6 @@ body {
     font-family: "Anek Devanagari", sans-serif;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
 .wrapper {
     width: 100%;
     display: flex;

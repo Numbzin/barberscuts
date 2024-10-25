@@ -5,6 +5,7 @@
     --text-color: #ffffff;
     --main-color: #ffe70c;
     --hover-color: #ffae00;
+    --bs-primary: #000;
     --gradient-bg: linear-gradient(126deg, var(--main-color), var(--bg-color));
   }
 
@@ -20,3 +21,13 @@
   .bg-yellow {
     background-color: var(--main-color);
   }
+
+  .white {
+    color: var(--text-color);
+  }
+
+  .bg-white {
+    background-color: var(--text-color);
+  }
+
+  
