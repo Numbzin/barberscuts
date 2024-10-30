@@ -2,7 +2,7 @@
 
 navBarComponentTemplate();
 
-function navBarComponent() {
+/* function navBarComponent() {
   const element = document.getElementById("navbar-component");
   const navbar = `<nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -37,7 +37,7 @@ function navBarComponent() {
         </div>
       </div>
     </nav>`;
-}
+} */
 
 function navBarComponentTemplate() {
   const element = document.getElementById("navbar-component");
