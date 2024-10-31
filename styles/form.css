@@ -1,0 +1,11 @@
+.box-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+    padding: 25px;
+}
+
+.container {
+    width: 55vw;
+}
