@@ -33,5 +33,24 @@ function validateEmail() {
   });
 }
 
+function validateTel() {
+  const telInput = document.querySelector("#telInput");
+  const telMessage = document.querySelector("#telHelp");
+
+  telInput.addEventListener("keyup", () => {
+    const telValue = telInput.value;
+    const telPattern = /^[0-9+-]+$/;
+
+    if (telValue.trim() === "") {
+      telMessage.innerHTML = "Telefone é obrigatório";
+    } else if (!telPattern.test(telValue)) {
+      telMessage.innerHTML = "Formato de telefone inválido";
+    } else {
+      telMessage.innerHTML = "";
+    }
+  });
+}
+
 validateName();
 validateEmail();
+validateTel();
