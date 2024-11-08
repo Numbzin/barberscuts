@@ -1,4 +1,4 @@
-function validateRequired(inputId, messageId, messageText) {
+ export function validateRequired(inputId, messageId, messageText) {
   const element = document.querySelector(`#${inputId}`);
   const message = document.querySelector(`#${messageId}`);
 
@@ -11,14 +11,14 @@ function validateRequired(inputId, messageId, messageText) {
   });
 }
 
-function validateName() {
+export function validateName() {
   validateRequired("nameInput", "nameHelp", "Nome é obrigatório");
 }
 
-function validateEmail() {
+export function validateEmail() {
   const emailInput = document.querySelector("#emailInput");
   const emailMessage = document.querySelector("#emailHelp");
-
+  if (!emailInput) return
   emailInput.addEventListener("keyup", () => {
     const emailValue = emailInput.value;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -33,10 +33,10 @@ function validateEmail() {
   });
 }
 
-function validateTel() {
+export function validateTel() {
   const telInput = document.querySelector("#telInput");
   const telMessage = document.querySelector("#telHelp");
-
+  if (!telInput) return
   telInput.addEventListener("keyup", () => {
     const telValue = telInput.value;
     const telPattern = /^[0-9+-]+$/;
@@ -51,6 +51,26 @@ function validateTel() {
   });
 }
 
-validateName();
-validateEmail();
-validateTel();
+export function validatePassword() {
+  const passwordInput = document.querySelector("#passwordInput");
+  const passwordMessage = document.querySelector("#passwordHelp");
+
+  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+
+  const updatePasswordMessage = (message) => {
+    passwordMessage.innerHTML = message;
+  };
+
+  passwordInput.addEventListener("keyup", () => {
+    const passwordValue = passwordInput.value.trim();
+
+    if (passwordValue === "") {
+      updatePasswordMessage("Senha é obrigatória");
+    } else if (!passwordPattern.test(passwordValue)) {
+      updatePasswordMessage("Senha deve conter letras maiúsculas, minúsculas e números, com no mínimo 8 caracteres.");
+    } else {
+      updatePasswordMessage("");
+    }
+  });
+}
+
