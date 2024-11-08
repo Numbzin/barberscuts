@@ -38,7 +38,7 @@ function criarCard(imgSrc, titulo, descricao) {
 }
 
 function CarregarCards() {
-  const container = document.getElementById("containerCards");
+  const container = document.getElementById("container-cards");
   dadosCards.forEach((dados) => {
     const card = criarCard(dados.imgSrc, dados.titulo, dados.descricao);
     container.appendChild(card);

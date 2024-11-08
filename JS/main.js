@@ -1,22 +1,19 @@
-import {
-  validateEmail,
-  validateName,
-  validatePassword,
-  validateRequired,
-  validateTel
-} from "./service/validator.js"
+import { validateName, validateEmail, validateTel, validatePassword, validatePasswordMatch } from "./service/validator.js";
+import { navBarComponentTemplate } from "../components/nav-component/nav-component.js";
 
-import {navBarComponentTemplate} from "./../components/nav-component/nav-component.js"
 
 navBarComponentTemplate();
-validateRequired();
-validateName();
-validateEmail();
-validateTel();
-validatePassword();
 
-window.addEventListener("scroll", function () {
-  let header = document.querySelector(".navbar");
-  header.classList.toggle("opacity", window.scrollY > 0);
-});
+const form = document.querySelector('form'); 
+if (form) {
+    validateName();
+    validateEmail();
+    validateTel();
+    validatePassword();
+    validatePasswordMatch();
+}
+
+
+
+
 

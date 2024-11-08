@@ -1,12 +1,9 @@
-validateName();
-validateEmail();
-validateTel();
-validatePassword();
-validatePasswordMatch();
-
-function validateName() {
+export function validateName() {
   const nameInput = document.querySelector("#nameInput");
   const nameMessage = document.querySelector("#nameHelp");
+  if (!nameInput) {
+    return
+  }
 
   nameInput.addEventListener("blur", () => {
     const nameValue = nameInput.value.trim();
@@ -27,9 +24,12 @@ function validateName() {
   });
 }
 
-function validateEmail() {
+export function validateEmail() {
   const emailInput = document.querySelector("#emailInput");
   const emailMessage = document.querySelector("#emailHelp");
+  if (!emailInput) {
+    return
+  }
 
   emailInput.addEventListener("keyup", () => {
     const emailValue = emailInput.value;
@@ -45,9 +45,12 @@ function validateEmail() {
   });
 }
 
-function validateTel() {
+export function validateTel() {
   const telInput = document.querySelector("#telInput");
   const telMessage = document.querySelector("#telHelp");
+  if (!telInput) {
+    return
+  }
 
   telInput.addEventListener("input", (e) => {
     let value = e.target.value.replace(/\D/g, "");
@@ -74,12 +77,14 @@ function validateTel() {
   });
 }
 
-function validatePassword() {
+export function validatePassword() {
   const passwordInput = document.querySelector("#passwordInput");
   const passwordMessage = document.createElement("div");
   passwordMessage.className = "form-text text-danger";
   passwordInput.parentNode.parentNode.appendChild(passwordMessage);
-
+  if (!passwordInput) {
+    return
+  }
   passwordInput.addEventListener("keyup", () => {
     const passwordValue = passwordInput.value;
     const passwordPattern =
@@ -96,9 +101,21 @@ function validatePassword() {
   });
 }
 
-function validatePasswordMatch() {
+export function validatePasswordMatch() {
   const passwordInput = document.querySelector("#passwordInput");
   const confPasswordInput = document.querySelector("#confPasswordInput");
+
+
+  if (!passwordInput || !confPasswordInput) {
+    console.log("Campos de senha não encontrados");
+    return;
+  }
+
+  if (!confPasswordInput.parentNode || !confPasswordInput.parentNode.parentNode) {
+    console.log("Estrutura do DOM para campos de senha incompleta");
+    return;
+  }
+
   const confPasswordMessage = document.createElement("div");
   confPasswordMessage.className = "form-text text-danger";
   confPasswordInput.parentNode.parentNode.appendChild(confPasswordMessage);
