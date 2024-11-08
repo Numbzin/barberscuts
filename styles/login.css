@@ -1,12 +1,12 @@
 body {
     background: linear-gradient(135deg, var(--main-color), var(--bg-color));
     /* Para Imagem de fundo!! */
-    background-image: url(../images/bglogin.jpg);
+    /* background-image: url(../images/bglogin.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: "Anek Devanagari", sans-serif;
+    font-family: "Anek Devanagari", sans-serif; */
 }
 
 .wrapper {
@@ -156,14 +156,4 @@ body {
 .register a{
     font-weight: 500;
     color: var(--bg-color);
-}
-
-
-@media only screen and (max-width: 564px) {
-    .wrapper {
-        padding: 20px;
-    }
-    .login-box {
-        padding: 7.5em 1.5em 4em 1.5em;
-    }
 }
