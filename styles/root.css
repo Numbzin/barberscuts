@@ -1,33 +1,10 @@
 :root {
-    --bg-color: #000000;
-    --second-bg-color: #ffe70c;
-    --third-bg-color: #ffffff;
-    --text-color: #ffffff;
-    --main-color: #ffe70c;
-    --hover-color: #ffae00;
-    --bs-primary: #000;
-    --gradient-bg: linear-gradient(126deg, var(--main-color), var(--bg-color));
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    font-family: "Nunito Sans", "Anek Devanagari", sans-serif;
-  }
-
-  .bg-yellow {
-    background-color: var(--main-color);
-  }
-
-  .white {
-    color: var(--text-color);
-  }
-
-  .bg-white {
-    background-color: var(--text-color);
-  }
-
-  
+  --bg-color: #000000;
+  --second-bg-color: #ffe70c;
+  --third-bg-color: #ffffff;
+  --text-color: #ffffff;
+  --main-color: #ffe70c;
+  --hover-color: #ffae00;
+  --bs-primary: #000;
+  --gradient-bg: linear-gradient(126deg, var(--main-color), var(--bg-color));
+}
