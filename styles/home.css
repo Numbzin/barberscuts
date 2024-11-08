@@ -56,6 +56,11 @@ span {
   font-family: Nunito Sans;
 }
 
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
 
 /* heading */
 .heading {
@@ -256,6 +261,7 @@ form h2 {
 
 form label {
   margin-bottom: 5px;
+  color: var(--bg-color);
 }
 
 form input {
@@ -426,20 +432,4 @@ form input {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media (max-width: 360px) {
-
-  .contact-section {
-    text-align: center;
-  }
-  .contact-map {
-    width: 100vh;
-  }
-  .contact {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
 }
