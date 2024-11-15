@@ -1,0 +1,25 @@
+[
+    {
+      "imgSrc": "./images/nmb.jpeg",
+      "titulo": "Corte Moderno",
+      "descricao":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "imgSrc": "./images/nmb.jpeg",
+      "titulo": "Barba Estilizada",
+      "descricao":
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "imgSrc": "./images/nmb.jpeg",
+      "titulo": "Fade Clássico",
+      "descricao":
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "imgSrc": "./images/nmb.jpeg",
+      "titulo": "Corte Basico",
+      "descricao": "lorem ipsum dolor sit amet"
+    }
+  ]

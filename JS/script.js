@@ -63,3 +63,7 @@ function Modal() {
     }
   };
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  Modal();
+});
