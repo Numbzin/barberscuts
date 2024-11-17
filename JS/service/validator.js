@@ -83,6 +83,7 @@ export function validatePassword() {
   passwordMessage.className = "form-text text-danger";
   passwordInput.parentNode.parentNode.appendChild(passwordMessage);
   if (!passwordInput) {
+    console.error("elemento não encontrado")
     return
   }
   passwordInput.addEventListener("keyup", () => {
