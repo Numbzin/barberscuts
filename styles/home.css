@@ -1,6 +1,6 @@
 body {
-  overflow-x: hidden; 
-  overflow-y: auto; 
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 100%;
 }
 
@@ -26,7 +26,6 @@ header {
   padding: 0 20px;
   flex-wrap: wrap;
   padding-top: 55px;
-  
 }
 
 .text-section {
@@ -61,7 +60,6 @@ section {
   padding: 10rem 9% 2rem;
 }
 
-
 /* heading */
 .heading {
   text-align: center;
@@ -80,10 +78,17 @@ section {
   font-family: Anek Devanagari;
 }
 
+.heading-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
 /* section cortes */
 
 #cortes {
-  padding: 20px;
+  padding: 65px;
   background-color: var(--second-bg-color);
 }
 
@@ -147,7 +152,7 @@ section {
 
 /* Modal */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 999;
   left: 0;
@@ -228,8 +233,12 @@ form input {
   background-color: var(--main-color);
 }
 
-
 /* Area de contato */
+
+#contato {
+  padding: 100px;
+}
+
 .contact {
   display: flex;
 }
@@ -283,17 +292,17 @@ form input {
   border: 1px solid var(--bg-color);
 }
 
-.left{
+.left {
   display: flex;
   justify-content: start;
 }
 
-.right{
+.right {
   display: flex;
   justify-content: end;
 }
 
-/* footer */  
+/* footer */
 
 .footer {
   position: relative;
