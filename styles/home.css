@@ -1,7 +1,8 @@
+html,
 body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  overflow-y: auto;
-  height: 100%;
 }
 
 /* header */
@@ -23,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 25px;
   flex-wrap: wrap;
   padding-top: 55px;
 }
@@ -32,6 +33,8 @@ header {
   font-size: 20px;
   max-width: 450px;
   padding-right: 20px;
+  animation: fadeInLeft 1s ease;
+  flex-wrap: wrap;
 }
 
 .text-section h1 {
@@ -46,8 +49,10 @@ header {
 .image-placeholder img {
   width: 150px;
   height: 150px;
-  border: 2px solid white;
+  border: 2px solid var(--main-color);
   border-radius: 50%;
+  transition: var(--transition-smooth);
+  animation: pulseGlow 3s infinite;
 }
 
 span {
@@ -71,6 +76,7 @@ section {
 .heading-map {
   color: var(--bg-color);
   font-family: Anek Devanagari;
+  padding-left: 15px;
 }
 
 .heading-cortes {
@@ -105,8 +111,8 @@ section {
 }
 
 .agendamento-content {
-  max-width: 50%;
-  padding: 20px;
+  max-width: 1200px;
+  padding: 40px;
 }
 
 .agendamento-content h1 {
@@ -117,6 +123,7 @@ section {
 
 .agendamento-content p {
   margin-bottom: 20px;
+  max-width: 1200px;
   font-size: 1.2em;
   color: var(--text-color);
 }
@@ -136,7 +143,7 @@ section {
   background-color: var(--hover-color);
 }
 
-.agendamento-image {
+.agendamento-image img {
   position: relative;
   flex: 1;
   text-align: center;
@@ -167,13 +174,16 @@ section {
   overflow: hidden;
   background-color: #fff;
   margin: 15% auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: modalOpen 0.3s forwards;
 }
 
 .close-btn {
@@ -227,53 +237,59 @@ form input {
   background-color: var(--hover-color);
 }
 
-/* section map */
+/* Area de contato */
 
 .contact-section {
   background-color: var(--main-color);
+  padding: 80px 5%;
 }
 
-/* Area de contato */
-
 #contato {
-  padding: 100px;
+  padding: 50px 20px;
 }
 
 .contact {
   display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.contact-map iframe {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
 }
 
 .contact-map div p span {
   color: var(--text-color);
 }
 
-.contact-map {
-  margin-left: 150px;
-}
-
 .contact-map,
 .contact-form {
-  padding: 20px 15px 20px 5px;
-  width: 50%;
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
 }
 
 /* form */
 
 .form-group {
-  width: 500px;
-  padding: 5px;
-  align-content: center;
-  padding-left: 20px;
-  margin-left: 100px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 15px auto;
+  padding: 0 15px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 8px;
   width: 100%;
+  padding: 12px;
   border-radius: 8px;
   border: 2px solid;
+  transition: var(--transition-smooth);
 }
 
 .form-group button {

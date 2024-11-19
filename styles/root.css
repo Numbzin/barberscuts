@@ -5,6 +5,11 @@
   --text-color: #ffffff;
   --main-color: #ffe70c;
   --hover-color: #ffae00;
-  --bs-primary: #000;
   --gradient-bg: linear-gradient(126deg, var(--main-color), var(--bg-color));
+  --transition-smooth: all 0.3s ease-in-out;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
 }

@@ -1,14 +1,8 @@
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding-top: 25px;
   display: flex;
-  justify-content: center;
-  overflow: hidden;
-  background: var(--bg-color);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar.opacity {
@@ -20,7 +14,7 @@
 .navbar-nav {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .navbar-nav li {
@@ -30,7 +24,7 @@
 }
 
 .navbar-nav li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 6px;
@@ -70,4 +64,6 @@
   padding: 9px;
 }
 
-
+.navbar img {
+  padding-left: 25px;
+}
