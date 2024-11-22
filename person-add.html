@@ -9,11 +9,18 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/form.css" />
-    <link rel="stylesheet" href="./styles/person-add.css">
+    <link rel="stylesheet" href="./styles/person-add.css" />
     <script src="./JS/main.js" type="module" defer></script>
+    <script src="./JS/application/person-add.js" type="module" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -21,7 +28,10 @@
     ></script>
     <title>Barber's Cut's | Registro</title>
   </head>
-  <body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <body
+    class="d-flex align-items-center justify-content-center"
+    style="min-height: 100vh"
+  >
     <div class="navbar-component" id="navbar-component"></div>
     <header></header>
     <div class="container">
@@ -32,12 +42,20 @@
               <h3 class="mb-0">Cadastro</h3>
             </div>
             <div class="card-body p-4 bg-main">
-              <form id="form" action="" enctype="multipart/form-data">
+              <form action="#" id="formPersonAdd" enctype="multipart/form-data">
                 <div class="mb-3">
                   <label for="nameInput" class="form-label">Nome</label>
                   <div class="input-group">
-                    <span class="input-group-text bg-black text-white"><i class="fas fa-user"></i></span>
-                    <input type="text" class="form-control" id="nameInput" placeholder="Digite seu nome" required />
+                    <span class="input-group-text bg-black text-white"
+                      ><i class="fas fa-user"></i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nameInput"
+                      placeholder="Digite seu nome"
+                      required
+                    />
                   </div>
                   <div id="nameHelp" class="form-text text-danger"></div>
                 </div>
@@ -45,8 +63,16 @@
                 <div class="mb-3">
                   <label for="telInput" class="form-label">Telefone</label>
                   <div class="input-group">
-                    <span class="input-group-text bg-black text-white"><i class="fas fa-phone"></i></span>
-                    <input type="tel" class="form-control" id="telInput" placeholder="Digite seu telefone" required />
+                    <span class="input-group-text bg-black text-white"
+                      ><i class="fas fa-phone"></i
+                    ></span>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telInput"
+                      placeholder="Digite seu telefone"
+                      required
+                    />
                   </div>
                   <div id="telHelp" class="form-text text-danger"></div>
                 </div>
@@ -54,8 +80,16 @@
                 <div class="mb-3">
                   <label for="emailInput" class="form-label">E-mail</label>
                   <div class="input-group">
-                    <span class="input-group-text bg-black text-white"><i class="fas fa-envelope"></i></span>
-                    <input type="email" class="form-control" id="emailInput" placeholder="Digite seu email" required />
+                    <span class="input-group-text bg-black text-white"
+                      ><i class="fas fa-envelope"></i
+                    ></span>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="emailInput"
+                      placeholder="Digite seu email"
+                      required
+                    />
                   </div>
                   <div id="emailHelp" class="form-text text-danger"></div>
                 </div>
@@ -63,29 +97,64 @@
                 <div class="mb-3">
                   <label for="passwordInput" class="form-label">Senha</label>
                   <div class="input-group">
-                    <span class="input-group-text bg-black text-white"><i class="fas fa-lock"></i></span>
-                    <input type="password" class="form-control" id="passwordInput" placeholder="Digite sua senha" required />
+                    <span class="input-group-text bg-black text-white"
+                      ><i class="fas fa-lock"></i
+                    ></span>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="passwordInput"
+                      placeholder="Digite sua senha"
+                      required
+                    />
                   </div>
                 </div>
 
                 <div class="mb-3">
-                  <label for="confPasswordInput" class="form-label">Confirme a senha</label>
+                  <label for="confPasswordInput" class="form-label"
+                    >Confirme a senha</label
+                  >
                   <div class="input-group">
-                    <span class="input-group-text bg-black text-white"><i class="fas fa-lock"></i></span>
-                    <input type="password" class="form-control" id="confPasswordInput" placeholder="Confirme sua senha" required />
+                    <span class="input-group-text bg-black text-white"
+                      ><i class="fas fa-lock"></i
+                    ></span>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="confPasswordInput"
+                      placeholder="Confirme sua senha"
+                      required
+                    />
                   </div>
                 </div>
 
                 <div class="mb-3">
-                  <label for="photoInput" class="form-label">Foto de perfil</label>
+                  <label for="photoInput" class="form-label"
+                    >Foto de perfil</label
+                  >
                   <div class="input-group">
-                    <span class="input-group-text bg-black text-white"><i class="fas fa-camera"></i></span>
-                    <input type="file" class="form-control" id="photoInput" accept="image/*" />
+                    <span class="input-group-text bg-black text-white"
+                      ><i class="fas fa-camera"></i
+                    ></span>
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="photoInput"
+                      accept="image/*"
+                    />
                   </div>
                 </div>
 
-                <button type="button" class="btn btn-custom w-100 mb-2">Cancelar</button>
-                <button type="submit" class="btn btn-custom w-100">Enviar</button>
+                <button type="button" class="btn btn-custom w-100 mb-2">
+                  Cancelar
+                </button>
+                <button
+                  type="button"
+                  id="submitForm"
+                  class="btn btn-custom w-100"
+                >
+                  Enviar
+                </button>
               </form>
             </div>
           </div>
@@ -93,6 +162,9 @@
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

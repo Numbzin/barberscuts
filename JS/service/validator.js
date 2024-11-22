@@ -2,7 +2,7 @@ export function validateName() {
   const nameInput = document.querySelector("#nameInput");
   const nameMessage = document.querySelector("#nameHelp");
   if (!nameInput) {
-    return
+    return;
   }
 
   nameInput.addEventListener("blur", () => {
@@ -28,7 +28,7 @@ export function validateEmail() {
   const emailInput = document.querySelector("#emailInput");
   const emailMessage = document.querySelector("#emailHelp");
   if (!emailInput) {
-    return
+    return;
   }
 
   emailInput.addEventListener("keyup", () => {
@@ -49,7 +49,7 @@ export function validateTel() {
   const telInput = document.querySelector("#telInput");
   const telMessage = document.querySelector("#telHelp");
   if (!telInput) {
-    return
+    return;
   }
 
   telInput.addEventListener("input", (e) => {
@@ -83,8 +83,8 @@ export function validatePassword() {
   passwordMessage.className = "form-text text-danger";
   passwordInput.parentNode.parentNode.appendChild(passwordMessage);
   if (!passwordInput) {
-    console.error("elemento não encontrado")
-    return
+    console.error("elemento não encontrado");
+    return;
   }
   passwordInput.addEventListener("keyup", () => {
     const passwordValue = passwordInput.value;
@@ -106,13 +106,15 @@ export function validatePasswordMatch() {
   const passwordInput = document.querySelector("#passwordInput");
   const confPasswordInput = document.querySelector("#confPasswordInput");
 
-
   if (!passwordInput || !confPasswordInput) {
     console.log("Campos de senha não encontrados");
     return;
   }
 
-  if (!confPasswordInput.parentNode || !confPasswordInput.parentNode.parentNode) {
+  if (
+    !confPasswordInput.parentNode ||
+    !confPasswordInput.parentNode.parentNode
+  ) {
     console.log("Estrutura do DOM para campos de senha incompleta");
     return;
   }
