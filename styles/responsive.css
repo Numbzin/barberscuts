@@ -12,8 +12,15 @@
   }
 
   .image-placeholder img {
-    width: 100%;
-    max-width: 250px;
+    /* width: 100%;
+    max-width: 250px; */
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .image-placeholder img {
+    display: none;
   }
 }
 
