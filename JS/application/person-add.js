@@ -6,6 +6,7 @@ import {
   validatePasswordMatch,
 } from "../service/validator.js";
 import { Person } from "../domain/Person.js";
+import { personService } from "../service/person.service.js";
 
 submitForm();
 
@@ -20,10 +21,10 @@ if (form) {
 
 function getFormPerson() {
   const person = new Person();
-  person.name = document.querySelector("#nameInput");
-  person.email = document.querySelector("#emailInput");
-  person.phone = document.querySelector("#telInput");
-  person.password = document.querySelector("#passwordInput");
+  person.name = document.querySelector("#nameInput").value;
+  person.email = document.querySelector("#emailInput").value;
+  person.phone = document.querySelector("#telInput").value;
+  person.password = document.querySelector("#passwordInput").value;
   return person;
 }
 
@@ -32,5 +33,6 @@ function submitForm() {
   buttonSubmit.addEventListener("click", () => {
     const person = getFormPerson();
     console.log(person);
+    personService.add(person);
   });
 }
