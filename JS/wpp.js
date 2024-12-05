@@ -1,25 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('formAgendamento').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const nome = document.getElementById('nome').value;
-        const telefone = document.getElementById('telefone').value;
-        const data = document.getElementById('data').value;
-        const hora = document.getElementById('hora').value;
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("formAgendamento")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
 
-        // Número do WhatsApp para o qual vai ser enviado o agendamento (com DDI e DDD)
-        const numeroWhatsApp = '55SEUNUMERO'; // Substitua pelo número correto
+      const nome = document.getElementById("nome").value;
+      const telefone = document.getElementById("telefone").value;
+      const data = document.getElementById("data").value;
+      const hora = document.getElementById("hora").value;
 
-        // Mensagem formatada
-        const mensagem = `Olá, meu nome é ${nome}. Gostaria de agendar um corte para o dia ${data} às ${hora}. Meu telefone é ${telefone}.`;
-        
-        // Codificar a mensagem para ser usada na URL
-        const mensagemCodificada = encodeURIComponent(mensagem);
+      // Número do WhatsApp para o qual vai ser enviado o agendamento (com DDI e DDD)
+      const numeroWhatsApp = "55SEUNUMERO"; // Substitua pelo número correto
 
-        // URL do WhatsApp
-        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+      // Mensagem formatada
+      const mensagem = `Olá, meu nome é ${nome}. Gostaria de agendar um corte para o dia ${data} às ${hora}. Meu telefone é ${telefone}.`;
 
-        // Redirecionar para o WhatsApp
-        window.location.href = urlWhatsApp;
+      // Codificar a mensagem para ser usada na URL
+      const mensagemCodificada = encodeURIComponent(mensagem);
+
+      // URL do WhatsApp
+      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+
+      // Redirecionar para o WhatsApp
+      window.location.href = urlWhatsApp;
     });
 });

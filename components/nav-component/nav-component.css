@@ -63,3 +63,7 @@
 .navbar-expand-lg {
   padding: 9px;
 }
+
+.mx-auto {
+  max-width: 1350px;
+}
